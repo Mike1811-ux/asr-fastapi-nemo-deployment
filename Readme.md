@@ -1,15 +1,17 @@
+## 📁 Project Structure
 asr_fastapi_app/
-├── app/
-│   ├── main.py           # FastAPI server
-│   ├── model.py          # ONNX model loader & inference
-│   ├── utils.py          # File validation & audio preprocessing
-│   └── config.py         # (Optional) configuration constants
-├── create_onnx_model.py  # Script to export NeMo model to ONNX
-├── Dockerfile            # Container spec
-├── requirements.txt      # Dependency list
-├── README.md             # This file
-├── Description.md        # Submission write-up
-└── test_audio.wav        # Sample audio file (optional)
+├── app/ # Main FastAPI application package
+│ ├── main.py # FastAPI server and /transcribe endpoint
+│ ├── model.py # ONNX model loading and inference logic
+│ └── utils.py # Audio validation and preprocessing
+├── create_onnx_model.py # Script to convert NeMo model to ONNX
+├── models/ # (Not tracked in Git) Folder for ONNX model
+│ └── asr_conformer_hi.onnx # Generated ONNX model (must run script)
+├── test_audio.wav # Sample test audio (5s, 16kHz sine wave)
+├── Dockerfile # Docker container configuration
+├── requirements.txt # Project dependencies
+├── README.md # Project overview and setup instructions
+└── Description.md # Documentation on features, issues, limitations
 
 
 # 🚀 Hindi ASR API — FastAPI + NVIDIA NeMo + ONNX
@@ -46,8 +48,6 @@ To generate the model locally, run the following script:
 
 ```bash
 python create_onnx_model.py
-
-
 
 ## 🧪 Example Usage
 
