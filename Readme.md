@@ -38,6 +38,17 @@ This project implements a production-ready Automatic Speech Recognition (ASR) AP
 
 ---
 
+## 🧠 ONNX Model Export
+
+The ONNX model file (`models/asr_conformer_hi.onnx`) is **not included** in this repository due to its size.
+
+To generate the model locally, run the following script:
+
+```bash
+python create_onnx_model.py
+
+
+
 ## 🧪 Example Usage
 
 ### ▶️ Transcription via `curl`
