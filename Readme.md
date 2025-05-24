@@ -1,19 +1,3 @@
-## 📁 Project Structure
-asr_fastapi_app/
-├── app/ # Main FastAPI application package
-│ ├── main.py # FastAPI server and /transcribe endpoint
-│ ├── model.py # ONNX model loading and inference logic
-│ └── utils.py # Audio validation and preprocessing
-├── create_onnx_model.py # Script to convert NeMo model to ONNX
-├── models/ # (Not tracked in Git) Folder for ONNX model
-│ └── asr_conformer_hi.onnx # Generated ONNX model (must run script)
-├── test_audio.wav # Sample test audio (5s, 16kHz sine wave)
-├── Dockerfile # Docker container configuration
-├── requirements.txt # Project dependencies
-├── README.md # Project overview and setup instructions
-└── Description.md # Documentation on features, issues, limitations
-
-
 # 🚀 Hindi ASR API — FastAPI + NVIDIA NeMo + ONNX
 
 This project implements a production-ready Automatic Speech Recognition (ASR) API using [NVIDIA NeMo](https://developer.nvidia.com/nvidia-nemo) and FastAPI. The API supports Hindi audio transcription for `.wav` files of 5–10 seconds duration and 16kHz sample rate.
